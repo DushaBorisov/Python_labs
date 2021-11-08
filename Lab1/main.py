@@ -38,6 +38,7 @@ def print_zero():
 
 
 def print_roots(roots):
+    print('Результат:')
     len_roots = len(roots)
 
     if len_roots == 0:

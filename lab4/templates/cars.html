@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Список авто{% endblock %}
+
+{% block content %}
+    <div>Список автомобилей:</div>
+<ul>
+    {% for car in data.cars %}
+        <li><a href="{% url 'car_url' car.id %}">{{ car.name }}</a> </li>
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+</ul>
+{% endblock %}

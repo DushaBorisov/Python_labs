@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{ data.name }}{% endblock %}
+
+{% block content %}
+    <div>
+    <h1>Автомобиль: {{ data.name }}</h1>
+    </div>
+        <br>
+        <h3>Характеристики:</h3>
+    <ul>
+        <li> Скорость: {{ data.speed }} км/ч</li>
+        <li> Цена: {{ data.cost}} млн $.</li>
+        <li> Цвет: {{ data.colour}} </li>
+    </ul>
+    <br>
+    {% load static %}
+    <img width=500 height=300 src="{% static data.picture %}" style="object-fit: cover; border: 1px dotted orange; box-shadow: 9px 10px 12px black;" alt=''/>
+{% endblock %}
